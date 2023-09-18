@@ -1,0 +1,33 @@
+.btn-activate-menu3d-tgt {
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.3s linear;
+    box-shadow: 2px 2px 5px transparent;
+}
+
+.btn-activate-menu3d-tgt:hover {
+    box-shadow: 2px 2px 5px #17141d4d;
+}
+
+#burger-ta-trd1 {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#burger-ta-trd1 .line {
+    width: 22px;
+    margin-bottom: 5px;
+    height: 2px;
+    background-color: #333333;
+}
+
+#burger-ta-trd1 .line:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 600px) {
+    #burger {
+        top: 90%;
+        right: 12%;
+    }
+}

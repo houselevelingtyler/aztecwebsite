@@ -1,0 +1,28 @@
+.image-scroll-container {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-scroll-item {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-scroll-item:not(:first-child) {
+    opacity: 0;
+}
+
+.image-scroll-item.active {
+    opacity: 1;
+}
+
+/* #content .ast-container {
+  width: 100% !important;
+  padding: 0 !important;
+  max-width: 100% !important;
+} */
