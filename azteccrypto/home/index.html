@@ -27,36 +27,49 @@
         }
 
         .pixel-button {
-            display: inline-block;
-            background-color: #e3045f;
-            color: white;
-            padding: 10px 40px; /* Increased padding for a longer button */
-            border: 2px solid #e3045f;
-            font-size: 16px;
-            text-transform: uppercase;
-            text-decoration: none;
-            position: relative;
-            cursor: pointer;
             font-family: "Joystix Monospace";
-            letter-spacing: 2px; /* Increased letter spacing */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+            font-size: 15vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(219deg, 
+                var(--color-1) 19%, 
+                transparent 19%,transparent 20%, 
+                var(--color-2) 20%, var(--color-2)  39%,
+                transparent 39%,transparent 40%, 
+                var(--color-3) 40%,var(--color-3) 59% ,
+                transparent 59%,transparent 60%, 
+                var(--color-4) 60%, var(--color-4) 79%,
+                transparent 79%, transparent 80%, 
+                var(--color-5) 80%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 10px 40px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         .pixel-button:hover {
-            background-color: white;
-            color: #e3045f;
+            background-color: transparent;
+            color: white;
+            text-shadow: none;
         }
 
-        .pixel-button:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: -1;
-            background: black;
-            border: 3px solid #e3045f;
+        :root {
+            --color-1: #411b84;
+            --color-2: #9c1569;
+            --color-3: #db0860;
+            --color-4: #fa0454;
+            --color-5: #5c0831;
+        }
+
+        @media screen and (min-width: 768px) {
+            .pixel-button {
+                font-size: 6.5rem;
+            }
         }
 
     </style>
