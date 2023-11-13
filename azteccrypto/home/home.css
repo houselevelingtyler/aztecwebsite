@@ -1,0 +1,750 @@
+@font-face {
+    font-family: 'Joystix Monospace';
+    src: url('joystix monospace.otf') format('opentype');
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Joystix Monospace', Arial, sans-serif;
+    cursor: url('index_files/chooncheese-home-1.2.gif'), auto;
+    perspective: 1500px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header img {
+    height: 115px; /* Adjust as needed */
+}
+
+/* Regular navigation styling for larger screens */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+nav a {
+    color: #3b4947;
+    text-decoration: none;
+    font-size: 1.35em; /* Larger font size */
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: #ff0099;
+    border-bottom: 2px solid #ff0099;
+}
+
+/* START LINK ANIMATION */
+@keyframes rainbow-text {
+    0% { color: red; }
+    15% { color: orange; }
+    30% { color: yellow; }
+    45% { color: green; }
+    60% { color: blue; }
+    75% { color: indigo; }
+    90% { color: violet; }
+    100% { color: red; }
+}
+
+/* Ensuring highest specificity */
+body nav a#start-link-main {
+    animation: rainbow-text 3s linear infinite !important;
+}
+
+@keyframes rainbow-border {
+    0% { border-color: red; }
+    15% { border-color: orange; }
+    30% { border-color: yellow; }
+    45% { border-color: green; }
+    60% { border-color: blue; }
+    75% { border-color: indigo; }
+    90% { border-color: violet; }
+    100% { border-color: red; }
+}
+
+body nav a#start-link-main {
+    padding: 5px 10px; /* Adjust as needed */
+    border: 3px solid; /* Initial border setup */
+    animation: rainbow-border 3s linear infinite !important;
+}
+
+
+#connect-btn {
+    font-family: 'Joystix Monospace', Arial, sans-serif;
+    background-color: transparent;
+    border: 2px solid #3b4947;
+    color: #3b4947;
+    padding: 10px 20px;
+    font-size: 1.2em; /* Larger button text */
+    cursor: pointer;
+    transition: color 0.3s, border 0.3s;
+}
+
+#connect-btn:hover {
+    color: #ff0099;
+    border-color: #ff0099;
+}
+
+/* Hamburger Menu */
+#hamburger-menu {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    color: #ff0099;
+    z-index: 1000;
+}
+
+/* Sidebar styles for mobile view */
+nav.sidebar {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100vh; /* Use viewport height */
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001;
+
+    /* Centering contents */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */   
+}
+
+nav.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+nav.sidebar a:hover {
+    color: #ff0099;
+}
+
+
+/* MAIN CONTENT STYLE */
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.intro-text {
+    color: #7b7b7b;
+    font-size: 1em; /* Adjust as needed */
+}
+
+.main-title {
+    font-size: 2.5em;
+    /*Adjustasneeded*/color: #ff0099;
+    text-shadow: 5px 5px #7b7b7b;
+    /*3Deffect*/transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+}
+
+.main-title:hover {
+    transform: scale(1.1); /* Increase the size slightly on hover */
+}
+
+.sub-text {
+    color: white;
+    margin-top: 10px;
+}
+
+.learn-more-btn {
+    font-family: 'Joystix Monospace', Arial, sans-serif;
+    background-color: #ff0099;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -ms-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    animation: shake 0.5s; /* Apply the shake animation on hover */
+    background-color: #ff7feb; /* Lighter color on hover */
+}
+
+/* Keyframes for shake animation */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    /* Ensure the width and height are equal for a perfect circle */
+    width: 35px;
+    height: 35px;
+    line-height: 40px; /* Center the icon vertically */
+    text-align: center; /* Center the icon horizontally */
+}
+
+/* Set a uniform size for all social media icons */
+.social-icons a i {
+    font-size: 20px; /* Adjust as needed */
+}
+
+.social-icons a:hover {
+    background-color: #ff0099;
+    color: white;
+}
+
+/* Font Awesome Icons */
+.fa-youtube, .fa-twitter{
+    font-size: 1.5em; /* Adjust as needed */
+}
+
+/* YouTube Video Container */
+.video-container {
+    margin-top: 20px;
+    padding: 5px;
+    border: 3px solid #ff0099;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px #ff0099; /* Shadow effect */
+    max-width: 560px; /* Maximum width of the video */
+    margin-left: auto; /* Center align */
+    margin-right: auto;
+}
+
+.video-container iframe {
+    width: 100%; /* Responsive width */
+    height: 315px; /* Height of the video */
+    border-radius: 7px; /* Rounded corners for iframe */
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px; /* Space from the video */
+}
+
+.about-logo {
+    flex: 1; /* Assign flexible space */
+    display: flex;
+    justify-content: center; /* Center the logo */
+    align-items: center;
+    max-width: 50%;
+}
+
+.about-logo img {
+    max-width: 50%; /* Adjust size of the logo */
+    height: auto;
+}
+
+.about-logo img:hover {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.about-content {
+    flex: 1; /* Assign flexible space */
+    max-width: 50%;
+    padding: 0 15px; /* Spacing */
+}
+
+.company-backing {
+    color: #7b7b7b;
+    font-size: 1em; /* Adjust size */
+}
+
+.about-title {
+    color: #ff0099;
+    font-size: 2em; /* Adjust size */
+    text-shadow: 4px 4px #7b7b7b; /* 3D effect */
+}
+
+.about-list {
+    color: white;
+    list-style-position: inside; /* Position list markers inside */
+    padding-left: 20px; /* Adjust list indentation */
+}
+
+.about-list li {
+    margin-bottom: 10px; /* Spacing between points */
+}
+
+.about-list li:hover {
+    transform: scale(1.1); /* Make it slightly bigger */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Roadmap Section Styling */
+
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-out, visibility 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.roadmap-section {
+    text-align: center;
+    margin-top: 50px; /* Spacing from the previous section */
+}
+
+.roadmap-title {
+    color: #ff0099;
+    font-size: 2.5em; /* Adjust the font size as needed */
+}
+
+.roadmap-icons {
+    display: flex;
+    flex-wrap: wrap; /* Allow icons to wrap into a new line */
+    justify-content: center; /* Center icons horizontally */
+    gap: 80px; /* Space between icons */
+    max-width: 900px; /* Maximum width of the icon area */
+    margin: auto; /* Center the entire block */
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px; /* Fixed width for each icon container */
+    margin-bottom: 30px; /* Spacing below each icon container */
+}
+
+.icon-container img, .icon-container iframe {
+    max-width: 100px; /* Set maximum width for GIFs and images */
+    max-height: 100px; /* Set maximum height for GIFs and images */
+    width: auto; /* Adjust width automatically */
+    height: auto; /* Adjust height automatically */
+    border-radius: 10px; /* Rounded corners for GIFs and images */
+    margin: 0 auto; /* Center the GIFs and images */
+}
+
+.icon-container p {
+    color: #ff0099;
+    font-size: 1em;
+    margin-top: 10px; /* Spacing between GIF/image and text */
+     /* Prevent text from breaking into multiple lines */
+}
+
+/* About Aztec Cryptocurrency Section Styling */
+.about-aztec-section {
+    text-align: center;
+    padding: 50px 15px; /* Added horizontal padding for smaller screens */
+}
+
+.about-aztec-title {
+    color: white;
+    font-size: 2em; /* Reduced font size */
+    margin-bottom: 30px;
+    word-wrap: break-word; /* Ensure long words don't overflow */
+}
+
+.about-aztec-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.aztec-subsection {
+    flex-basis: calc(33.33% - 20px); /* Adjust for three columns */
+    max-width: calc(33.33% - 20px); /* Add max-width for better control */
+    text-align: center;
+    padding: 0 10px; /* Padding for text and images */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.aztec-subsection img {
+    max-width: 100%; /* Responsive image */
+    height: auto;
+    max-height: 300px; /* Increased maximum height */
+}
+
+.aztec-subsection:hover {
+    transform: scale(1.05); /* Slightly enlarge the subsection on hover */
+}
+
+.aztec-subheading {
+    color: #ff0099;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.aztec-text {
+    color: white;
+    word-wrap: break-word; /* Ensure text wraps and doesn't overflow */
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+}
+
+.faq-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 40px; /* Space between each FAQ item */
+}
+
+.faq-gif {
+    max-width: 300px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.faq-gif:hover {
+    transform: rotate(360deg); /* Full spin on hover */
+}
+
+.faq-subheading:hover,
+.faq-text:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.5s ease; /* Smooth transition for scaling */
+}
+
+.faq-subheading {
+    color: #ff0099;
+    font-size: 1.5em; /* Adjust as needed */
+    margin-bottom: 10px;
+    text-align: center; /* Center align subheading */
+}
+
+.faq-text {
+    color: white;
+    text-align: justify; /* For block format */
+    max-width: 80%; /* Adjust width as needed for block appearance */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-button {
+    font-family: 'Joystix Monospace', Arial, sans-serif;
+    background-color: #ff0099;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Space between text and button */
+}
+
+.faq-button:hover {
+    background-color: #ff0077; /* Slightly darker shade for hover */
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .faq-text {
+        max-width: 95%; /* Wider text block on smaller screens */
+    }
+
+    .faq-button {
+        width: 100%; /* Full-width button on smaller screens */
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #3b4947; /* Top border line */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-links a.active {
+    color: #ff0099;
+}
+
+/* Footer Right Section */
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px; /* Adjust as needed */
+    height: auto;
+
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.75em;
+    color: white;
+    text-align: center;
+}
+
+.footer-bottom .highlight,
+.footer-bottom a {
+    color: #ff0099;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* PEEL BACK */
+
+.peel-back-active #page-container::before {
+    content: '';
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    right: 0; /* Ensure it covers the entire width */
+    bottom: 0; /* Ensure it covers the entire height of the viewport */
+    background-color: rgba(158, 137, 127, 0.8); /* The specified hue */
+    z-index: 1; /* Ensure it's above the content but below the peel-back panel */
+}
+
+.peel-back-active #page-container {
+    transform: rotateX(-15deg); /* Less extreme rotation */
+    transform-origin: top center;
+    transition: transform 1s ease;
+    overflow: hidden; /* Prevents scrolling */
+    height: 100vh; /* Limit to viewport height */
+    position: fixed; /* Fixed position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    right: 0; /* Align to right */
+    bottom: 0; /* Align to bottom */
+    z-index: 1; /* Ensure it's above the content */
+}
+
+#page-container {
+    position: relative;
+    transform-origin: top center;
+    transition: transform 1s ease; /* Smooth transformation */
+}
+
+#peel-back-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100vh);
+    transition: transform 1s ease;
+    z-index: 2;
+    margin-top: 60px;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+}
+
+/* Adjusting the first link to push all links slightly down */
+#peel-back-panel a:first-child {
+    margin-top: 0; /* Ensure all links are aligned */
+}
+
+/* Adjusting the alignment and spacing of the links inside peel-back-panel */
+#peel-back-panel a {
+    margin: 0 15px; /* Horizontal space between the links */
+    font-size: 1.2em; /* Adjust font size as needed */
+    color: #ff0099; /* Set the initial color */
+    text-decoration: none; /* Remove underline */
+}
+
+#peel-back-panel a:hover {
+    color: white; /* Change color on hover */
+}
+
+#peel-back-panel i {
+    margin-right: 5px; /* Add some space between the icon and text */
+    color: inherit; /* Ensure the icon color matches the text */
+}
+
+/* Ensure the links do not turn blue or purple when clicked */
+#peel-back-panel a:visited {
+    color: #ff0099; /* Same color as the normal state */
+}
+
+/* Class to apply the peel-back effect */
+.peel-back-active #page-container {
+    transform: rotateX(-60deg); /* Increased angle */
+}
+
+.peel-back-active #peel-back-panel {
+    transform: translateY(0); /* Bring into view */
+}
+
+body.peel-back-active {
+    overflow: hidden;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+
+    .main-title {
+        font-size: 2em;
+    }
+
+    .learn-more-btn, .social-icons a {
+        padding: 10px 16px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links, .footer-logo {
+        flex: none;
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .footer-bottom {
+        font-size: .75em; /* Slightly larger for readability */
+    }
+
+    /* Adjustments for smaller screens */
+    nav:not(.sidebar), #connect-btn {
+        display: none;
+    }
+
+    nav.sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    header {
+        justify-content: flex-start;
+        position: relative;
+    }
+
+    header img {
+        height: 80px; /* Adjust as needed */
+    }
+
+    .about-section {
+        flex-direction: column; /* Stack logo and content */
+    }
+
+    .about-logo,
+    .about-content {
+        max-width: 100%; /* Full width on small screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .about-title,
+    .company-backing,
+    .about-list {
+        text-align: center; /* Center text for mobile */
+    }
+
+    .about-title {
+        font-size: 1.5em; /* Smaller font size for mobile */
+    }
+
+    .about-list {
+
+        padding-left: 0; /* Reset list padding */
+    }
+
+    .about-list li {
+        margin-bottom: 10px; /* Spacing between points */
+    }
+
+    .icon-container {
+        margin-bottom: 20px; /* Additional spacing for mobile view */
+    }
+
+    .aztec-subsection {
+        flex-basis: 100%; /* Full width for smaller screens */
+        max-width: 100%;
+    }
+
+    .aztec-subsection img {
+        max-height: 275px; /* Smaller images on smaller screens */
+    }
+
+    .about-aztec-title {
+        font-size: 1.75em; /* Slightly smaller title on smaller screens */
+    }
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+    .footer-logo {
+        /* Adjust the right margin to shift the logo to the left */
+        margin-right: 50px;  /* Adjust this value as needed */
+    }
+}
