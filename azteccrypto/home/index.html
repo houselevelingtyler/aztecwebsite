@@ -41,6 +41,11 @@
             height: 100vh;
         }
 
+        canvas {
+				outline: none;
+				display: block;
+		}
+
         #logo {
             max-width: 90%; /* Makes sure the logo is responsive on smaller screens */
             margin-bottom: 20px;
@@ -93,9 +98,15 @@
         }
 
     </style>
+
+	<link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon32x32.png" sizes="32x32">
+	<link rel="modulepreload" href="https://unpkg.com/@splinetool/runtime@0.9.497/build/runtime.js">
 </head>
 <body>
-    <img id="logo" src="logo.gif" alt="Logo">
+    
+    <iframe src='https://my.spline.design/cat-dba545ab5122db4eee2ad117818d720f/' frameborder='0' width='100%' height='100%'></iframe>
+    
     <a href="welcome.html" class="pixel-button">ENTER</a>
 </body>
 </html>
