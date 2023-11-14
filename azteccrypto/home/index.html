@@ -110,6 +110,28 @@
             color: white;
         }
 
+    @media screen and (max-width: 768px) {
+        .pixel-button {
+            font-size: 5rem; /* Smaller font size for smaller screens */
+            margin-top: 20px; /* Add space above the button */
+    }
+
+    #catIframe {
+        width: 100%;
+        height: calc(100vh - 80px); /* Adjust height to account for the button */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pixel-button {
+        font-size: 3rem; /* Even smaller font size for very small screens */
+    }
+
+    #catIframe {
+        height: calc(100vh - 60px); /* Further adjust height for very small screens */
+    }
+}
+
     </style>
 
 	<link rel="icon" type="image/png" href="https://app.spline.design/_assets/_icons/icon_favicon16x16.png" sizes="16x16">
