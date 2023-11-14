@@ -113,7 +113,9 @@
 
         @media screen and (max-width: 768px) {
             #catIframe {
-                height: 75vh; /* Adjust the height to make the cat smaller */
+                transform: scale(0.6); /* More scaling for smaller screens */
+                width: 166%; /* Adjust width accordingly */
+                margin-top: -15%; /* Adjust the position */
             }
 
             .pixel-button {
@@ -121,15 +123,18 @@
             }
         }
 
-    @media screen and (max-width: 480px) {
-        .pixel-button {
-            font-size: 3rem; /* Even smaller font size for very small screens */
-        }
 
-        #catIframe {
-            height: 75vh; /* Further adjust height for very small screens */
+        @media screen and (max-width: 480px) {
+            #catIframe {
+                transform: scale(0.5); /* Even more scaling for very small screens */
+                width: 200%; /* Adjust width accordingly */
+                margin-top: -20%; /* Adjust the position */
+            }
+
+            .pixel-button {
+                font-size: 3rem; /* Smaller font size for the button */
+            }
         }
-    }
 
     </style>
 
