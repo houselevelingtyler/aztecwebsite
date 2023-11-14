@@ -52,8 +52,25 @@
             margin-bottom: 20px;
         }
 
+        #catIframe {
+            transform-origin: top center;
+            transform: scale(0.8);
+            width: 125%;
+            margin-top: -5%;
+            position: absolute;
+            top: 10%; /* Adjust this value as needed */
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+        }
+
         .pixel-button {
             font-family: "Joystix Monospace";
+
+            position: absolute;
+            bottom: 10%; /* Adjust this value as needed */
+            left: 50%;
+            transform: translateX(-50%);
+
             font-size: 15vw;
             font-weight: 900;
             text-transform: uppercase;
@@ -113,9 +130,9 @@
 
         @media screen and (max-width: 768px) {
             #catIframe {
-                transform: scale(0.6); /* More scaling for smaller screens */
-                width: 166%; /* Adjust width accordingly */
-                margin-top: -15%; /* Adjust the position */
+                transform: translateX(-50%) scale(0.6);
+                width: 166%;
+                margin-top: -10%;
             }
 
             .pixel-button {
@@ -126,13 +143,27 @@
 
         @media screen and (max-width: 480px) {
             #catIframe {
-                transform: scale(0.5); /* Even more scaling for very small screens */
-                width: 200%; /* Adjust width accordingly */
-                margin-top: -20%; /* Adjust the position */
+                transform: translateX(-50%) scale(0.5);
+                width: 200%;
+                margin-top: -20%;
             }
 
             .pixel-button {
                 font-size: 3rem; /* Smaller font size for the button */
+            }
+        }
+
+                /* Additional media query for screens around 430x932 */
+                @media screen and (max-height: 932px) and (max-width: 430px) {
+            #catIframe {
+                transform: translateX(-50%) scale(0.4);
+                width: 250%;
+                margin-top: -5%;
+            }
+
+            .pixel-button {
+                bottom: 30%; /* Further adjust button positioning */
+                font-size: 2.5rem; /* Adjust font size if needed */
             }
         }
 
