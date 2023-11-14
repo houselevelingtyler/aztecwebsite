@@ -37,8 +37,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Changed to flex-start */
             height: 100vh;
+            overflow: hidden; /* Add this to prevent scrolling */
         }
 
         canvas {
@@ -110,27 +111,25 @@
             color: white;
         }
 
-    @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
+            #catIframe {
+                height: 40vh; /* Adjust the height to make the cat smaller */
+            }
+
+            .pixel-button {
+                font-size: 5rem; /* Adjust the font size for the button */
+            }
+        }
+
+    @media screen and (max-width: 480px) {
         .pixel-button {
-            font-size: 5rem; /* Smaller font size for smaller screens */
-            margin-top: 20px; /* Add space above the button */
-    }
+            font-size: 3rem; /* Even smaller font size for very small screens */
+        }
 
-    #catIframe {
-        width: 100%;
-        height: calc(100vh - 80px); /* Adjust height to account for the button */
+        #catIframe {
+            height: calc(100vh - 60px); /* Further adjust height for very small screens */
+        }
     }
-}
-
-@media screen and (max-width: 480px) {
-    .pixel-button {
-        font-size: 3rem; /* Even smaller font size for very small screens */
-    }
-
-    #catIframe {
-        height: calc(100vh - 60px); /* Further adjust height for very small screens */
-    }
-}
 
     </style>
 
